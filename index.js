@@ -1,5 +1,5 @@
-import urls from './lib/urls.js'
-import io from './lib/io.js'
+import * as urls from './lib/urls.js'
+import * as io from './lib/io.js'
 
 export const load = async (config) => {
 	// if data has been hard-coded
@@ -12,8 +12,6 @@ export const load = async (config) => {
 	return parse(data)
 }
 
-const parse = data => {
+export const parse = (data) => {
 	return typeof data === 'string' ? JSON.parse(data) : data
 }
-
-export default this
